@@ -5,9 +5,9 @@ import java.util.regex.Pattern;
 public class MedianCalculator {
 
 	public static void main(String[] args) {
+
 		String[] firstNarray = null, secondNarray=null;
 		int N =0, N1 = 0;
-		
 		Scanner in = new Scanner(System.in);		
 		do
 		{
@@ -22,7 +22,6 @@ public class MedianCalculator {
 	        Matcher secondm = p.matcher(secondN);
 	        
 	        if (firstm.matches()){firstN = firstm.group(1);}
-	        
 	        if (secondm.matches()){secondN = secondm.group(1);}
 	        
 			firstNarray = firstN.split("\\D+");
@@ -37,8 +36,7 @@ public class MedianCalculator {
  
 	    }while (N<=1 || N != N1);	
 		in.close();
-		
-		
+			
 		long[] numbers = new long[2*N];
 		for (int i = 0; i<= N-1; i++)
 		{numbers[i] = Long.parseLong(firstNarray[i]);}
@@ -53,8 +51,6 @@ public class MedianCalculator {
 		}
 		catch (Exception ex)
 		{System.out.println(ex.getMessage());}
-		
-		
-	}
 
+	}
 }
