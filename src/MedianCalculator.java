@@ -11,12 +11,12 @@ public class MedianCalculator {
 		Scanner in = new Scanner(System.in);		
 		do
 		{
-			System.out.println("Введите первый массив N натуральных чисел, разделенных любым символом (одной строкой):");
+			System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІС‹Р№ РјР°СЃСЃРёРІ N РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР», СЂР°Р·РґРµР»РµРЅРЅС‹С… Р»СЋР±С‹Рј СЃРёРјРІРѕР»РѕРј (РѕРґРЅРѕР№ СЃС‚СЂРѕРєРѕР№):");
 	        String firstN = in.nextLine();
-	        System.out.println("Введите второй массив N натуральных чисел, разделенных любым символом (одной строкой):");
+	        System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕР№ РјР°СЃСЃРёРІ N РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… С‡РёСЃРµР», СЂР°Р·РґРµР»РµРЅРЅС‹С… Р»СЋР±С‹Рј СЃРёРјРІРѕР»РѕРј (РѕРґРЅРѕР№ СЃС‚СЂРѕРєРѕР№):");
 	        String secondN = in.nextLine();
 	        
-	        //убираем начальные и конечные нечисловые символы
+	        //deleting non-digits at the start and the end
 	        Pattern p = Pattern.compile("^\\D*((\\d+\\D+)*\\d+)\\D*$");  
 	        Matcher firstm = p.matcher(firstN);
 	        Matcher secondm = p.matcher(secondN);
@@ -30,9 +30,9 @@ public class MedianCalculator {
 			N1 = secondNarray.length;
 			
 			if (N <=1 || N1<=1)
-			{System.out.println("Массивы должны состоять из как минимум двух чисел. Введите массивы заново.");}
+			{System.out.println("РњР°СЃСЃРёРІС‹ РґРѕР»Р¶РЅС‹ СЃРѕСЃС‚РѕСЏС‚СЊ РёР· РєР°Рє РјРёРЅРёРјСѓРј РґРІСѓС… С‡РёСЃРµР». Р’РІРµРґРёС‚Рµ РјР°СЃСЃРёРІС‹ Р·Р°РЅРѕРІРѕ.");}
 			if (N != N1)
-			{System.out.println("Введенные массивы имеют не одинаковый размер. Введите массивы заново.");}
+			{System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ РјР°СЃСЃРёРІС‹ РёРјРµСЋС‚ РЅРµ РѕРґРёРЅР°РєРѕРІС‹Р№ СЂР°Р·РјРµСЂ. Р’РІРµРґРёС‚Рµ РјР°СЃСЃРёРІС‹ Р·Р°РЅРѕРІРѕ.");}
  
 	    }while (N<=1 || N != N1);	
 		in.close();
@@ -47,7 +47,7 @@ public class MedianCalculator {
 			double firstend = Calculator.GetKElementOnLR(numbers, N-1, 0, 2*N-1);
 			double secondstart = Calculator.GetKElementOnLR(numbers, N,  0, 2*N-1);
 			double median = (firstend + secondstart)/2;
-			System.out.println("Медиана равна = " + median);
+			System.out.println("РњРµРґРёР°РЅР° СЂР°РІРЅР° = " + median);
 		}
 		catch (Exception ex)
 		{System.out.println(ex.getMessage());}

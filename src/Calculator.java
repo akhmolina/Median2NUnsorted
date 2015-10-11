@@ -7,13 +7,13 @@ public abstract class Calculator {
 
 		if (numbers.length <= r | l>r | l<0)
 		{throw new ArrayIndexOutOfBoundsException
-			("Ìàññèâ integers " + 
-					" íå âêëþ÷àåò â ñåáÿ îòðåçîê ïîèñêà [" + l + "," + r + "]");}
+			("ÐœÐ°ÑÑÐ¸Ð² integers " + 
+					" Ð½Ðµ Ð²ÐºÐ»ÑŽÑ‡Ð°ÐµÑ‚ Ð² ÑÐµÐ±Ñ Ð¾Ñ‚Ñ€ÐµÐ·Ð¾Ðº Ð¿Ð¾Ð¸ÑÐºÐ° [" + l + "," + r + "]");}
 		if (numbers.length <= k | k<0)
 		{throw new ArrayIndexOutOfBoundsException
-			("Ìàññèâ integers íå ñîäåðæèò ýëåìåíòîâ ñ èíäåêñîì k = " + k + ".");}
+			("ÐœÐ°ÑÑÐ¸Ð² integers Ð½Ðµ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ñ Ð¸Ð½Ð´ÐµÐºÑÐ¾Ð¼ k = " + k + ".");}
 		
-		long x = numbers[k]; // x - íà÷àëî ïîèñêà
+		long x = numbers[k]; // x - search start
 		int i = l;
 		int j = r;
 		
